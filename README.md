@@ -25,7 +25,7 @@ i.e.
 - Activate virtual environment
 - Run the command: pip install -r requirements.txt
 - Refer to Canvas submission for .env setup and superuser name + password
-- Run the command: python -m manage.py runserver
+- Run the command: python manage.py runserver
 - In the web browser, navigate to http://127.0.0.1:8000/
 
 ### How to use your library (where applicable)
