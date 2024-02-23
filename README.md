@@ -1,37 +1,56 @@
-# api-quick-start
+# LAB - Class 34
 
-Template Project for starting up CRUD API with Django Rest Framework
+## Project: cookie-stand-api
 
-## Customization Steps
+### Author: Errol Vidad
+V.1.0.0 (Pr: https://github.com/Code-Fellows-School-Work/cookie-stand-api/pull/1)
 
-- DO NOT migrate yet
-- add additional dependencies as needed
-  - Re-export requirements.txt as needed
-- change `things` folder to the app name of your choice
-- Search through entire code base for `Thing`,`Things` and `things` to modify code to use your resource
-  - `project/settings.py`
-  - `project/urls.py`
-  - App's files
-    - `views.py`
-    - `urls.py`
-    - `admin.py`
-    - `serializers.py`
-    - `permissions.py`
-  - "Front" files
-    - if including a customer facing portion of the site then update/recreate:
-      - `urls_front.py`
-      - `views_front.py`
-      - template files
-      - Make sure to update project `urls.py` to add routes to the "front".
-- Update ThingModel with fields you need
-  - Make sure to update other modules that would be affected by Model customizations. E.g. serializers, tests, etc.
-- Rename `project/.env.sample` to `.env` and update as needed
-  - To generate secret key use `python3 -c "import secrets; print(secrets.token_urlsafe())"`
-- Run makemigrations and migrate commands when ready.
-- Run `python manage.py collectstatic`
-  - This repository includes static assets in repository. If you are using a Content Delivery Network then remove `staticfiles` from repository.
-- Optional: Update `api_tester.py`
+### Links and Resources
+- Back-end server url (when applicable): None
+- Front-end application (when applicable): None
 
-## Database
+### Setup
+- Install ThunderClient extension in VS Code
 
-**NOTE:** If you are using Postgres instead of SQLite then make sure to install `psycopg2-binary` and include in `requirements.txt`
+i.e.
+
+- PORT - Port Number: 8000
+- DATABASE_URL - None
+
+### How to initialize/run your application (where applicable)
+
+- git clone https://github.com/Code-Fellows-School-Work/cookie-stand-api
+- cd cookie-stand-api
+- Run the command: python -m venv .venv
+- Activate virtual environment
+- Run the command: pip install -r requirements.txt
+- Refer to Canvas submission for .env setup and superuser name + password
+- Run the command: python -m manage.py runserver
+- In the web browser, navigate to http://127.0.0.1:8000/
+
+### How to use your library (where applicable)
+
+### CRUD Routes:
+
+    - [Admin](http://127.0.0.1:8000/admin/)
+        - Admin panel
+    - [Cookie Stand List](http://127.0.0.1:8000/cookiestands/)
+        - Review list of cookie stands
+    - [Cookie Stand Detail](http://localhost:8000/cookiestands/<int>)
+        - Review detailed info of selected cookie stand
+        - Readonly access for non-owners
+        - Edit and delete access for owner
+    - [About Page](http://127.0.0.1:8000/about)
+        - Information not about the author
+    - [Token Access](http://127.0.0.1:8000/api/token/)
+        - Provides authenticated users an access and refresh token
+    - [Token Refresh](http://127.0.0.1:8000/api/token/refresh/)
+        - Provides authenticated users a new access token if current access token expired
+
+
+
+
+
+
+
+
